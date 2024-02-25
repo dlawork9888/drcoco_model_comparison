@@ -39,6 +39,9 @@
   - LigthGBM도 0.899로 90%에 가까운 정확도를 산출
 - SVM
   - 세 데이터셋에 대해 다른 세 모델(XGBoost, LightGBM, CatBoost)보다 성능이 좋지 않음
-
-
-
+- 결론
+  - CatBoostClassifier, LightGBM, XGBoost는 모든 데이터셋에 대해 90%에 준하는 정확도를 보여줌
+  - LightGBM은 Random Oversampling에 대해 0.905의 정확도를,
+  - CatBoostClassifier는 ADASYN Oversampling에 대해 0.911의 정확도를 보여줌,
+  - SMOTE Oversampling에서는 0.9가 넘는 정확도는 산출되지 않았지만 CatBoostClassifier가 0.887로 가장 근접
+  - SVM은 추가적인 하이퍼파라미터 튜닝으로 성능 향상의 여지는 있으나, 다른 모델들 또한 마찬가지 이기에 CatBoostClassifier, LightGBM, XGBoost 중에서 모델을 선정해 튜닝을 진행하는 것이 나은듯 보임
